@@ -1,10 +1,10 @@
-# Stellar
+# [Stellar](https://jq-pan.github.io/Stellar/)
 
 Stellar is an application that renders data about a particular city or town after prompting the user to enter a location. Stellar will display the city's weather conditions as well as astronomy features.
 
 # Functionality & MVPs
 
-- View the inputted city's weather conditions as well as a rendered view of the astronomy from the given location.
+- View the inputed city's weather conditions as well as a rendered view of the astronomy from the given location.
 
 ## In *Stellar*, users will be able to:
 
@@ -31,6 +31,8 @@ This project is to be implemented with the following technologies:
 - Webpack to bundle and transpile the source JavaScript code.
 - npm to manage project dependencies.
 
+
+- Try ChartJS 
 # Implementation Timeline
 
 - Friday Afternoon & Weekend: Setup Project including all the necessary technologies including canvas, d3, and webpack
