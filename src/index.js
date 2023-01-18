@@ -23,10 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(".mapboxgl: " + mapboxgl);
     console.log(mapboxgl);
 
-    // window.getMap = getMap;
-
-
-
+    
     getWeatherData('10001');
     getMap();
 })

@@ -1,6 +1,4 @@
-import renderData  from "./renderData";
-
-export function getMap() {
+export function getMap(long, latt) {
     mapboxgl.accessToken = 'pk.eyJ1IjoiamlvbmdxaXBhbiIsImEiOiJjbGQwazA3eXgyeWJkM3BrNmI5bjFtcXF1In0.K6FfXFCQgn5x31jHvjaW2Q';
     const map = new mapboxgl.Map({
         container: 'map', // container ID
@@ -11,5 +9,11 @@ export function getMap() {
     });
     // const mapCanary = document.querySelector(".mapboxgl-map");
     // mapCanary.style.overflow = "visible"
+
+        // Fly to a random location
+        map.flyTo({
+            center: [long, latt],
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
 
 }
