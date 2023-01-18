@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    window.getWeatherData = getWeatherData;
+    getWeatherData('10001');
+    // window.getWeatherData = getWeatherData;
     // window.getMap = getMap;
 
     getMap();

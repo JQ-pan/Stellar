@@ -10,8 +10,12 @@ function renderData(data) {
     temp.innerText = data.current.temp_f + "°F";
     icon.src = data.current.condition.icon;
     description.innerText = data.current.condition.text;
-    humidity.innerText = "Humidity:" + data.current.humidity;
-    wind.innerText = "Wind speed" +data.current.gust_mph + "m/h";
+    humidity.innerText = "Humidity: " + data.current.humidity + "%";
+    wind.innerText = "Wind speed: " +data.current.gust_mph + " mi/h";
+
+    document.querySelector(".weather").classList.remove("loading");
+
+    // document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x/900/?" + description + "');"
 }
 
 export default renderData
