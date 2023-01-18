@@ -1,7 +1,6 @@
 // Import method from weather script
 import { getWeatherData } from "./scripts/weather";
 import { getMap } from "./scripts/getMap";
-import renderData from "./scripts/renderData";
 
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -18,11 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
             getWeatherData(document.getElementById("searchInput").value)
         }
     })
+    console.log("Map:" + map);
+    console.log(map);
+    console.log(".mapboxgl: " + mapboxgl);
+    console.log(mapboxgl);
 
-    getWeatherData('10001');
-    // window.getWeatherData = getWeatherData;
     // window.getMap = getMap;
 
+
+
+    getWeatherData('10001');
     getMap();
 })
 
