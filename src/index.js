@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             getWeatherData(document.getElementById("searchInput").value)
         }
     })
+
     console.log("Map:" + map);
     console.log(map);
     console.log(".mapboxgl: " + mapboxgl);

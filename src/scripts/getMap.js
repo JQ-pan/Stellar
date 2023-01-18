@@ -11,4 +11,5 @@ export function getMap() {
     });
     // const mapCanary = document.querySelector(".mapboxgl-map");
     // mapCanary.style.overflow = "visible"
+
 }
