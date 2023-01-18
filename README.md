@@ -26,8 +26,7 @@ Stellar is an application that renders data about a particular city or town afte
 
 This project is to be implemented with the following technologies:
 - Weather API: https://www.weatherapi.com/.
-- The Canvas API to render constellations.
-- The D3 API to render any non-visual data.
+- Mapbox API: https://www.mapbox.com/.
 - Webpack to bundle and transpile the source JavaScript code.
 - npm to manage project dependencies.
 

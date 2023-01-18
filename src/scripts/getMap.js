@@ -4,16 +4,8 @@ export function getMap(long, latt) {
         container: 'map', // container ID
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
         style: 'mapbox://styles/jiongqipan/cld0k1ilh000515qffkp57mli', // style URL
-        center: [-74.0, 40.7], // starting position [lng, lat]
+        center: [-74.01, 40.71], // starting position [lng, lat]
         zoom: 11 // starting zoom
     });
-    // const mapCanary = document.querySelector(".mapboxgl-map");
-    // mapCanary.style.overflow = "visible"
-
-        // Fly to a random location
-        map.flyTo({
-            center: [long, latt],
-            essential: true // this animation is considered essential with respect to prefers-reduced-motion
-        });
-
+    return map;
 }
