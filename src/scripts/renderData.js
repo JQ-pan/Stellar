@@ -8,19 +8,17 @@ function renderData(data) {
     const humidity = document.querySelector(".humidity");
     const wind = document.querySelector(".wind");
 
+    const feels = document.querySelector(".feelslike");
+    const precip = document.querySelector(".precip");
+
     const high = document.querySelector(".high")
     const low = document.querySelector(".low")
 
     const long = parseFloat(data.location.lon);
     const latt = parseFloat(data.location.lat);
-    
+
     getMap(long, latt);
     
-    // map.flyTo({
-    //     center: [long, latt],
-    //     essential: true // this animation is considered essential with respect to prefers-reduced-motion
-    // });
-
     city.innerText = "Weather in " + data.location.name;
     temp.innerText = data.current.temp_f + "°F";
     icon.src = data.current.condition.icon;
@@ -30,6 +28,9 @@ function renderData(data) {
 
     high.innerText = "Hi: " + data.forecast.forecastday[0].day.maxtemp_f + "°F";
     low.innerText = "Lo: " + data.forecast.forecastday[0].day.mintemp_f + "°F";
+
+    feels.innerText = "Feels like: " + data.current.feelslike_f + "°F";
+    precip.innerText = "Precipitation: " + data.current.precip_in + " in";
 
     document.querySelector(".weather").classList.remove("loading");
 
