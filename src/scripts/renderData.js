@@ -32,6 +32,9 @@ function renderData(data) {
 
     const searchTerm = data.location.name.split(" ").join("").toLowerCase();
     body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + searchTerm + "')"
+
+    const linkedIn = document.getElementById("linkedIn")
+    linkedIn.src = "/assets/navbar/linkedin.png"
 }
 
 export default renderData
