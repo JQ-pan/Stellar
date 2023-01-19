@@ -2,10 +2,6 @@ import { getWeatherData } from "./scripts/weather";
 import { getMap } from "./scripts/getMap";
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    const linkedIn = document.getElementById("linkedIn")
-
-    linkedIn.src = "/assets/navbar/linkedin.png"
 
     const searchButton = document.getElementById("searchButton");
     searchButton.addEventListener("click", function(event) {
