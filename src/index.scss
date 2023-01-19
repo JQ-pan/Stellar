@@ -1,4 +1,5 @@
 // @import "./styles/reset.scss";
+@import "./styles/modal.scss";
 
 body {
     display: flex;
@@ -34,7 +35,7 @@ div#root {
     justify-content: center;
 }
 
-button {
+.searchButton {
     margin: 0.5em;
     border-radius: 50%;
     border: none;
@@ -59,11 +60,11 @@ input.search-bar {
     width: calc(100% - 100px)
 }
 
-button:hover {
+#searchButton:hover {
     background: rgba(124, 124, 124, 0.4196078431);
 }
 
-button {
+#searchButton {
     margin: 0.5em;
     border-radius: 50%;
     border: none;
@@ -86,11 +87,6 @@ input.search-bar {
     font-family: inherit;
     font-size: 105%;
     width: calc(100% - 100px);
-}
-
-button:hover {
-    background: rgba(124, 124, 124, 0.4196078431);
-
 }
 
 h1.temp {
@@ -145,15 +141,15 @@ h1.temp {
 
 .nav {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     gap: 10px;
     max-height: 24px;
 }
 
 .nav_icon {
     padding: 0 5px 0 5px;
-    max-width: 22px;
-    max-height: 24px;
+    width: 22px;
+    height: 24px;
 }
 
 img.nav_icon:hover {
@@ -166,8 +162,31 @@ img.nav_icon:hover {
     display: flex;
     justify-content: center;
 }
-.row1, .row2 {
+
+.row1,
+.row2 {
     font-size: small;
     display: flex;
     justify-content: space-between;
+}
+
+.topBar {
+    padding-bottom: 0.5em;
+}
+
+#myBtn {
+    float: left;
+    padding: 0.2em 0.7em;
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    color: white;
+    background: rgba(124, 124, 124, 0.168627451);
+    font-family: inherit;
+}
+
+#myBtn:hover {
+    background: rgba(124, 124, 124, 0.4196078431);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
 }

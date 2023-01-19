@@ -1,4 +1,5 @@
 import { getWeatherData } from "./scripts/weather";
+// import { modal } from "./scripts/modal";
 import { getMap } from "./scripts/getMap";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,6 +17,24 @@ document.addEventListener('DOMContentLoaded', () => {
             getWeatherData(searchInput.value)
         }
     })
+
+    let modal = document.getElementById("myModal");
+    let btn = document.getElementById("myBtn");
+    let span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
     
     getWeatherData('10001');
 })
