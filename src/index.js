@@ -1,6 +1,4 @@
 import { getWeatherData } from "./scripts/weather";
-// import { modal } from "./scripts/modal";
-import { getMap } from "./scripts/getMap";
 
 document.addEventListener('DOMContentLoaded', () => {
 

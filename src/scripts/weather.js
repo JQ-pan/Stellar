@@ -23,5 +23,5 @@ export async function getWeatherData(userInput) {
             console.error("ERROR:", error);
         });
 
-    
+
 }
