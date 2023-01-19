@@ -3,21 +3,21 @@ import { getMap } from "./scripts/getMap";
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
+    
     searchButton.addEventListener("click", function(event) {
-        const input = document.getElementById("searchInput").value;
+        const input = searchInput.value;
         getWeatherData(input);
     })
 
-    const searchInput = document.getElementById("searchInput");
     window.addEventListener("keyup", function(event) {
         if (event.key === "Enter") {
-            getWeatherData(document.getElementById("searchInput").value)
+            getWeatherData(searchInput.value)
         }
     })
     
     getWeatherData('10001');
-    getMap();
 })
 
 

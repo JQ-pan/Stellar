@@ -13,8 +13,13 @@ function renderData(data) {
 
     const long = parseFloat(data.location.lon);
     const latt = parseFloat(data.location.lat);
+    
     getMap(long, latt);
     
+    // map.flyTo({
+    //     center: [long, latt],
+    //     essential: true // this animation is considered essential with respect to prefers-reduced-motion
+    // });
 
     city.innerText = "Weather in " + data.location.name;
     temp.innerText = data.current.temp_f + "°F";
