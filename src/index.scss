@@ -114,20 +114,20 @@ h1.temp {
     justify-content: space-around;
 }
 
-.weather.loading {
-    max-height: 20px;
-    position: relative;
-    visibility: hidden;
-}
+// .weather.loading {
+//     max-height: 20px;
+//     position: relative;
+//     visibility: visible;
+// }
 
-.weather.loading:after {
-    visibility: visible;
-    content: "Loading...";
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 20px;
-}
+// .weather.loading:after {
+//     visibility: visible;
+//     content: "Loading...";
+//     color: white;
+//     position: absolute;
+//     top: 0;
+//     left: 20px;
+// }
 
 #map {
     width: 100%;

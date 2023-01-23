@@ -32,7 +32,7 @@ function renderData(data) {
     feels.innerText = "Feels like: " + data.current.feelslike_f + "°F";
     precip.innerText = "Precipitation: " + data.current.precip_in + " in";
 
-    document.querySelector(".weather").classList.remove("loading");
+    // document.querySelector(".weather").classList.remove("loading");
 
     const body = document.getElementsByTagName("BODY")[0];
 
