@@ -1,27 +1,40 @@
 import { getWeatherData } from "./scripts/weather";
-import { getMap } from "./scripts/getMap";
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    const linkedIn = document.getElementById("linkedIn")
 
-    linkedIn.src = "/assets/navbar/linkedin.png"
-
+    const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
+    
     searchButton.addEventListener("click", function(event) {
-        const input = document.getElementById("searchInput").value;
+        const input = searchInput.value;
         getWeatherData(input);
     })
 
-    const searchInput = document.getElementById("searchInput");
     window.addEventListener("keyup", function(event) {
         if (event.key === "Enter") {
-            getWeatherData(document.getElementById("searchInput").value)
+            getWeatherData(searchInput.value)
         }
     })
+
+    let modal = document.getElementById("myModal");
+    let btn = document.getElementById("myBtn");
+    let span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
     
     getWeatherData('10001');
-    getMap();
 })
 
 

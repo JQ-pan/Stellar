@@ -8,14 +8,17 @@ function renderData(data) {
     const humidity = document.querySelector(".humidity");
     const wind = document.querySelector(".wind");
 
+    const feels = document.querySelector(".feelslike");
+    const precip = document.querySelector(".precip");
+
     const high = document.querySelector(".high")
     const low = document.querySelector(".low")
 
     const long = parseFloat(data.location.lon);
     const latt = parseFloat(data.location.lat);
+
     getMap(long, latt);
     
-
     city.innerText = "Weather in " + data.location.name;
     temp.innerText = data.current.temp_f + "°F";
     icon.src = data.current.condition.icon;
@@ -26,15 +29,14 @@ function renderData(data) {
     high.innerText = "Hi: " + data.forecast.forecastday[0].day.maxtemp_f + "°F";
     low.innerText = "Lo: " + data.forecast.forecastday[0].day.mintemp_f + "°F";
 
-    document.querySelector(".weather").classList.remove("loading");
+    feels.innerText = "Feels like: " + data.current.feelslike_f + "°F";
+    precip.innerText = "Precipitation: " + data.current.precip_in + " in";
 
     const body = document.getElementsByTagName("BODY")[0];
 
     const searchTerm = data.location.name.split(" ").join("").toLowerCase();
     body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + searchTerm + "')"
 
-    const linkedIn = document.getElementById("linkedIn")
-    linkedIn.src = "/assets/navbar/linkedin.png"
 }
 
 export default renderData

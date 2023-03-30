@@ -1,5 +1,6 @@
 export function getMap(long, latt) {
     mapboxgl.accessToken = 'pk.eyJ1IjoiamlvbmdxaXBhbiIsImEiOiJjbGQwazA3eXgyeWJkM3BrNmI5bjFtcXF1In0.K6FfXFCQgn5x31jHvjaW2Q';
+
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
@@ -7,5 +8,9 @@ export function getMap(long, latt) {
         center: [-74.01, 40.71], // starting position [lng, lat]
         zoom: 11 // starting zoom
     });
-    return map;
+    map.flyTo({
+        // Fly to a random location
+        center: [long, latt],
+        essential: true // this animation is considered essential with respect to prefers-reduced-motion
+    });
 }

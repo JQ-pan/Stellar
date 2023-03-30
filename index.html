@@ -10,13 +10,10 @@
 
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
-    
+
     <title>Stellar</title>
-    
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest"> -->
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicons/BadCloud.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,17 +22,32 @@
 </head>
 
 <body>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Enter any location into the search box to display the appropriate weather conditions including
+                temperature, weather condition, humidity, wind speed, and precipitation.</p>
+        </div>
+    </div>
+
     <div id="root">
 
-        <div class="nav">
+        <div class="topBar">
 
-            <a href="https://www.linkedin.com/in/jiongqi/">
-                <img id="linkedIn" src="./assets/navbar/linkedin.png" alt="linkedin" class="icon">
-            </a>
-            
-            <a href="https://github.com/JQ-pan">
-                <img src="./assets/navbar/github.png" alt="github" class="icon">
-            </a>
+            <button id="myBtn">Tutorial</button>
+
+            <div class="nav">
+                <div class="liveLinks">
+                    <a href="https://www.linkedin.com/in/jiongqi/">
+                        <img src="./assets/navbar/linkedin.png" alt="linkedin" class="nav_icon">
+                    </a>
+
+                    <a href="https://github.com/JQ-pan">
+                        <img src="./assets/navbar/github.png" alt="github" class="nav_icon">
+                    </a>
+                </div>
+            </div>
 
         </div>
 
@@ -49,7 +61,7 @@
                 </svg></button>
         </div>
 
-        <div class="weather loading">
+        <div class="weather">
             <h2 class="city"></h2>
             <h1 class="temp"></h1>
             <div class="hilo">
@@ -60,10 +72,16 @@
                 <img src="" alt="" class="icon" />
                 <div class="description"></div>
             </div>
-            <div class="humidity"></div>
-            <div class="wind"></div>
+            <div class="row1">
+                <div class="humidity"></div>
+                <div class="wind"></div>
+            </div>
+            <div class="row2">
+                <div class="feelslike"></div>
+                <div class="precip"></div>
+            </div>
+            <div id="map"></div>
         </div>
-        <div id="map"></div>
     </div>
 </body>
 
