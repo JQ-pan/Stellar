@@ -1,7 +1,5 @@
 # [Stellar](https://jq-pan.github.io/Stellar/)
 
-The live link currently does not work.
-
 Stellar is an application that renders data about a particular city or town after prompting the user to enter a location. Stellar will display the city's weather conditions as well as astronomy features.
 
 ![Stellar](./assets/readme/main_interface.png)
