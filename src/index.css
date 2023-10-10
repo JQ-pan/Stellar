@@ -1,8 +1,8 @@
-// @import "./styles/reset.scss";
-@import "./styles/modal.scss";
+@import "./styles/reset.css";
+@import "./styles/modal.css";
 
 body {
-    display: flex;
+    display:weath flex;
     justify-content: center;
     align-items: center;
     height: 100vh;

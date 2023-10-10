@@ -22,6 +22,4 @@ export async function getWeatherData(userInput) {
         .catch(error => {
             console.error("ERROR:", error);
         });
-
-
 }
